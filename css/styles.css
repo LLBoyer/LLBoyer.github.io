@@ -1,0 +1,128 @@
+
+@keyframes spin{
+	from {transform: rotate(360deg);}
+	to {transform: rotate (0deg);}
+}
+
+@keyframes fadein{
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@-webkit-keyframes spin{
+	from {-webkit-transform:rotate(360deg);}
+	to {-webkit-transform:rotate (0deg);}
+}
+@-webkit-keyframes fadein{
+from {opacity: 0;}
+to {opacity: 1;}
+}
+header {
+	width: 100%;
+	min-height: 75px;
+}
+header h1 {
+	margin:  0 auto;
+	text-align: center;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 50px;
+	color: red;
+	padding: 10px 0 0 0;
+
+}
+nav {
+	float: left;
+	position: relative;
+	width:100%;
+	height: 200px;
+	margin:0 auto;
+}
+nav ul{
+	margin:0;
+	clear: left;
+	float: left;
+	list-style: none;
+	padding: 0;
+	position: relative;
+	left: 50%;
+	text-align: center;
+	min-width: 228px;
+}
+nav ul li{
+	display:block;
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	right: 50%;
+}
+
+nav li a {
+	position:relative;
+	margin: 0 0 0 1px;
+	float:left;
+	display: block;
+	background: transparent url(../Images/cfw300.jpg) no-repeat;
+	background-size: 100%;
+	width: 200px;
+	height: 200px;
+	text-indent: -9999px;
+	border-radius: 149px ;
+	font-size: 35px;
+	color: red;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	text-align: center;
+	line-height: 275px;
+}
+
+nav li a:hover span{
+	animation: fadein 2s;
+	-webkit-animation: fadein 2s;
+	animation-iteration-count:1;
+	-webkit-animation-iteration-count:1;
+	
+}
+nav li a:hover,
+nav li a:focus{
+	text-indent: 0;
+	-webkit-animation: spin 1s;
+	animation: spin 1s;
+	animation-iteration-count:1;
+	-webkit-animation-iteration-count:1;
+}
+@media screen and (max-width: 640px){
+	header h1 {
+		font-size: 40px;
+	}
+	nav{
+		height:170px;
+	}
+	nav li a {
+	background-size: 100%;
+	width: 150px;
+	height: 150px;
+	font-size: 25px;
+	line-height: 200px;
+}
+
+@media screen and (max-width: 480px){
+	header{
+		min-height: 43px;
+
+	}
+	header h1 {
+		font-size: 20px;
+		color: red;
+	}
+	nav{
+		height:150px;
+	}
+	nav li a {
+	background-size: 100%;
+	width: 75px;
+	height: 75px;
+	font-size: 15px;
+	line-height: 108px;
+	}
+}
